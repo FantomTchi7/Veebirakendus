@@ -1,0 +1,72 @@
+@font-face {
+  font-family: BigBlueTerm Nerd Font;
+  src: url('BigBlueTermPlusNerdFont-Regular.ttf') format('truetype');
+}
+
+nav{
+	
+	color: #000000; /*teksti värv*/
+	background-color: #8F8FFF; /*tausta värv*/
+	/*width: 50%; laius*/
+	text-align: center;
+	font-family: "BigBlueTerm Nerd Font";
+	font-size: 18pt;
+}
+
+nav ul {
+	border-right-style: solid;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #8F8FFF;
+	border: groove 4pt;
+}
+
+nav li {
+	float: left;
+	border-right-style: groove;
+}
+
+nav li a {
+	display: block;
+	color: #000000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #8F8F8F;
+}
+
+main section {
+	
+	color: #000000;
+	background-color: #FFFFFF;
+	font-family: "BigBlueTerm Nerd Font";
+	margin: 4pt;
+	
+}
+
+main section h2 {
+	
+	color: #000000;
+	background-color: #FFFFFF;
+	font-family: "BigBlueTerm Nerd Font";
+	text-align: center;
+	
+}
+
+footer {
+	
+	color: #000000;
+	background-color: #8F8FFF;
+	/*width: 25%;*/
+	font-family: "BigBlueTerm Nerd Font";
+	border: groove 4pt;
+	margin: 4pt;
+	text-align: center;
+	padding: 1%;
+	
+}
