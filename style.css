@@ -13,8 +13,13 @@ nav{
 	font-size: 18pt;
 }
 
+nav ul li:nth-child(1) {
+	font-family: "BigBlueTerm Nerd Font";
+	font-weight: bold;
+	font-variant-caps: small-caps;
+}
+
 nav ul {
-	border-right-style: solid;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -36,8 +41,16 @@ nav li a {
 	text-decoration: none;
 }
 
-nav li a:hover {
-	background-color: #8F8F8F;
+nav ul li:nth-child(1):hover {
+	background-image: url("Nimetu.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+
+}
+
+main div {
+
 }
 
 main section {
