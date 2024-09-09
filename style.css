@@ -1,85 +1,189 @@
+/* Font declaration for later use in game wiki | Декларация шрифтов для дальнейшего использования в вики игры */
 @font-face {
-  font-family: BigBlueTerm Nerd Font;
-  src: url('BigBlueTermPlusNerdFont-Regular.ttf') format('truetype');
+    font-family: 'CaskaydiaCove Nerd Font Regular';
+    src: url('CaskaydiaCoveNerdFont-Regular.ttf') format('truetype');
 }
 
-nav{
-	
-	color: #000000; /*teksti värv*/
-	background-color: #8F8FFF; /*tausta värv*/
-	/*width: 50%; laius*/
-	text-align: center;
-	font-family: "BigBlueTerm Nerd Font";
-	font-size: 18pt;
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font Bold';
+    src: url('CaskaydiaCoveNerdFont-Bold.ttf') format('truetype');
 }
 
-nav ul li:nth-child(1) {
-	font-family: "BigBlueTerm Nerd Font";
-	font-weight: bold;
-	font-variant-caps: small-caps;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'CaskaydiaCove Nerd Font Regular', monospace;
 }
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #8F8FFF;
-	border: groove 4pt;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav li {
-	float: left;
-	border-right-style: groove;
-}
-
-nav li a {
-	display: block;
-	color: #000000;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-nav ul li:nth-child(1):hover {
-	background-image: url("Nimetu.png");
-	background-repeat: no-repeat;
-	background-position: left;
-	background-size: cover;
-
+main {
+    flex: 1;
+    margin-top: 48px;
+    /* Fix hidden navbar text | Исправляет спрятанный под навбаром текст */
 }
 
 main div {
-
+    padding-left: 16px;
 }
 
-main section {
-	
-	color: #000000;
-	background-color: #FFFFFF;
-	font-family: "BigBlueTerm Nerd Font";
-	margin: 4pt;
-	
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    color: #FFFFFF;
+    z-index: 1000;
+    align-items: center;
 }
 
-main section h2 {
-	
-	color: #000000;
-	background-color: #FFFFFF;
-	font-family: "BigBlueTerm Nerd Font";
-	text-align: center;
-	
+nav .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
+
+nav .logo img {
+    width: 48px;
+}
+
+nav .logo-text {
+    font-size: 16px;
+    font-family: 'CaskaydiaCove Nerd Font Bold', monospace;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo img.mirror {
+    /* Mirror logo | Отражает лого */
+    transform: scaleX(-1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+}
+
+nav li a:hover,
+nav .logo:hover,
+nav ul li a.active {
+    /* Highlighting | Подсветочка */
+    background-color: #404040;
+}
+
+nav ul li.right {
+    margin-left: auto;
+}
+
+/*.language-selector {
+ * margin-left: auto;
+ * margin-right: 16px;
+ * } *
+ *
+ * .language-selector select {
+ * background-color: #404040;
+ * color: #FFFFFF;
+ * border: none;
+ * padding: 8px;
+ * font-size: 14px;
+ * border-radius: 4px;
+ * }*/
 
 footer {
-	
-	color: #000000;
-	background-color: #8F8FFF;
-	/*width: 25%;*/
-	font-family: "BigBlueTerm Nerd Font";
-	border: groove 4pt;
-	margin: 4pt;
-	text-align: center;
-	padding: 1%;
-	
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100vw;
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media screen and (max-aspect-ratio: 1/1.5), screen and (max-width: 1000px) {
+
+    /* Mobile view | Режим для смартфонов */
+    main {
+        margin-top: 0;
+        /* No need for hidden navbar text fix if using static position | Исправление текста под навбаром не нужно когда позиция статическая */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        /* Switch to static position in mobile view | Переключение на статическую позицию в режиме для смартфонов */
+    }
+
+    nav .logo {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    nav .logo img {
+        width: min(11vw, 62px);
+    }
+
+    nav .logo-text {
+        font-size: clamp(18px, 28px, 4vw);
+    }
+
+    nav ul {
+        justify-content: center;
+        width: 100vw;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        width: 100vw;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+        font-size: clamp(18px, 28px, 4vw);
+        padding: 16px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /*.language-selector {
+     *	margin-left: 0;
+     *	padding-top: 4px;
+     *	padding-bottom: 16px;
+}*/
+    footer {
+        font-size: clamp(16px, 18px, 3vw);
+    }
 }

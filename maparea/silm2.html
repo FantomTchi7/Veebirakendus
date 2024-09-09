@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilt mis on jagatud osadeks</title>
+    <link href="areaStyle.css" rel="stylesheet">
+</head>
+<body>
+<h1>Ilus kena maja</h1>
+<img alt="maja" src="maja.png" usemap="#maja">
+<map name="maja">
+    <!--ring (x, y, R)-->
+    <area alt="ring" coords="183, 276, 87" href="ring.html" shape="circle">
+    <!--kolmnurk või mitmenurkne figuur-->
+    <area alt="katus" coords="10, 188, 183, 13, 354, 182" href="katus.html" shape="poly">
+    <!--ristkülik-->
+    <area alt="alus" coords="96, 189, 268, 363" href="alus.html" shape="rect">
+
+    <area alt="toru" coords="261, 92, 298, 53, 336, 92, 299, 130" href="toru.html" shape="poly">
+</map>
+<div id="kirjeldus">Siib saab kirjeldus</div>
+
+<h1>Troll</h1>
+<img alt="trollface" id="troll" src="trollsilm2.png" usemap="#trollface">
+<map name="trollface">
+    <area alt="silm1" coords="558, 239, 619, 280" href="silm1.html" shape="rect">
+
+    <area alt="silm2" coords="675, 256, 718, 285" href="silm2.html" shape="rect">
+
+    <area alt="nina" coords="612, 273, 681, 330" href="nina.html" shape="rect">
+
+    <area alt="hammas" coords="592, 329, 630, 353" href="trollhammas.html" shape="rect">
+
+    <area alt="hammas2" coords="670, 382, 693, 411" href="trollhammas2.html" shape="rect">
+
+</map>
+</body>
+</html>

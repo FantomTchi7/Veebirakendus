@@ -1,0 +1,11 @@
+div#kirjeldus {
+    position: absolute;
+    left: 420px;
+    top: 50px;
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#troll {
+}
